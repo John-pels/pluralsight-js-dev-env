@@ -1,8 +1,7 @@
 import 'whatwg-fetch';
-import {get } from 'https';
 
 export function getUsers() {
-    return get('users')
+    return get('users');
 }
 
 function get(url) {
@@ -13,6 +12,6 @@ function onSuccess(response) {
     return response.json();
 }
 
-function onError | (error) {
+function onError(error) {
     console.log(error); //eslint-disable-line no-console
 }
